@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Подключение пользователя</title>
+    <meta name="author" content="Jake Rocheleau">
+    <link rel="stylesheet" type="text/css" media="all" href="style.css">
+    <link rel="stylesheet" type="text/css" media="all" href="responsive.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  </head>
+
+  <body>
+
+    <section id="container">
+      <h2>Подключение пользователя</h2>
+      <form name="hongkiat" id="hongkiat-form" method="post" action="form.php">
+        <div id="wrapping" class="clearfix">
+          <section id="aligned">
+
+            <section id="recipientcase">
+
+              <!--h3>Организация(выберите из списка):</h3-->
+              <select id="org" name="org" class="selmenu">
+				  <option value="grain2">Выбирете вашу организацию</option>
+				  <option value="Грейнхолдинг">Грейнхолдинг</option>
+                <option value="Подольский хлебокомбинат">Подольский хлебокомбинат</option>
+                <option value="РязаньХлеб">РязаньХлеб</option>
+                <option value="Рязаньзернопродукт">Рязаньзернопродукт</option>
+                <option value="Руский хлеб(Кострома)">"ООО"Руский хлеб"(Кострома)</option>
+              </select>
+            </section>
+            <input type="text" name="fio" id="fio" placeholder="Фамилия, имя, отчество" autocomplete="off" tabindex="1" class="txtinput">
+            <!--input type="org" name="org" id="org" placeholder="Организация" autocomplete="off" tabindex="2" class="txtinput"-->
+            <input type="text" name="otd" id="otd" placeholder="Отдел" autocomplete="off" tabindex="2" class="txtinput">
+
+            <input type="email" name="email" id="email" placeholder="Логин для почты (латинские символы)" autocomplete="off" tabindex="2" class="txtinput">
+
+            <!--input type="url" name="website" id="website" placeholder="Website URL" autocomplete="off" tabindex="3" class="txtinput">
+		
+			<input type="1chuman" name="1chuman" id="1chuman" placeholder="Фамилия сотрудника напримере которго выдать права " tabindex="4" class="txtinput"-->
+
+            <textarea name="info" id="message" placeholder="Дополнительная информация для IT отдела" tabindex="5" class="txtblock"></textarea>
+          </section>
+
+          <section id="aside" class="clearfix">
+
+
+            <section id="prioritycase">
+              <h3>Подключение баз 1С</h3>
+              <h4>Выберите какие базы подключить</h4>
+              <div id="row_podolsk1">
+                  <span class="radiobadge">
+    						<input type="checkbox" id="low" name="check[0]" value="УПП_ПХK(Подольск)">
+    						<label for="low">УПП_ПХK(Подольск)</label>
+    					</span>
+                  <input type="text" name="nameuppphk" id="name" placeholder="Пример ФИО по кому выдать права" autocomplete="off" tabindex="1" class="txtinput1">
+                  <span class="radiobadge">
+    						<input type="checkbox" id="med" name="check[1]" value="УСП_ПХК(Подольск)">
+    						<label for="med">УСП_ПХК(Подольск)</label>
+    					</span>
+                  <input type="text" name="nameuspphk" id="name" placeholder="Пример ФИО по кому выдать права" autocomplete="off" tabindex="1" class="txtinput1">
+                  <span class="radiobadge">
+                <input type="checkbox" id="med" name="check[2]" value="PZ(Подольск)">
+                <label for="med">PZ(Подольск)</label>
+              </span>
+                  <input type="text" name="pz" id="name" placeholder="Пример ФИО по кому выдать права" autocomplete="off" tabindex="1" class="txtinput1">
+                  <span class="radiobadge">
+    						<input type="checkbox" id="high" name="check[3]" value="ТД(Подольск)">
+    						<label for="high">ТД(Подольск)</label>
+    					</span>
+                  <input type="text" name="td" id="name" placeholder="Пример ФИО по кому выдать права" autocomplete="off" tabindex="1" class="txtinput1">
+				  <span class="radiobadge">
+				  <input type="checkbox" id="high" name="check[4]" value="БАРС(Подольск)">
+                  <label for="high">БАРС(Подольск)</label>
+					  </span>
+                  <input type="text" name="bars" id="name" placeholder="Пример ФИО по кому выдать права" autocomplete="off" tabindex="1" class="txtinput1">
+              </div>
+                <div id="row_podolsk2">
+                 <span class="radiobadge">
+    						<input type="checkbox" id="low" name="check[5]" value="УПП_ПХK(Подольск)">
+    						<label for="low">УПП_ПХK(Подольск)</label>
+    					</span>
+                  <input type="text" name="nameuppphk" id="name" placeholder="Пример ФИО по кому выдать права" autocomplete="off" tabindex="1" class="txtinput1">
+                  <span class="radiobadge">
+    						<input type="checkbox" id="med" name="check[6]" value="УСП_ПХК(Подольск)">
+    						<label for="med">УСП_ПХК(Подольск)</label>
+    					</span>
+                  <input type="text" name="nameuspphk" id="name" placeholder="Пример ФИО по кому выдать права" autocomplete="off" tabindex="1" class="txtinput1">
+                  <span class="radiobadge">
+                <input type="checkbox" id="med" name="check[7]" value="PZ(Подольск)">
+                <label for="med">PZ(Подольск)</label>
+              </span>
+                  <input type="text" name="pz" id="name" placeholder="Пример ФИО по кому выдать права" autocomplete="off" tabindex="1" class="txtinput1">
+                  <span class="radiobadge">
+    						<input type="checkbox" id="high" name="check[8]" value="ТД(Подольск)">
+    						<label for="high">ТД(Подольск)</label>
+    					</span>
+                  <input type="text" name="td" id="name" placeholder="Пример ФИО по кому выдать права" autocomplete="off" tabindex="1" class="txtinput1">
+				  <span class="radiobadge">
+				  <input type="checkbox" id="high" name="check[9]" value="БАРС(Подольск)">
+                  <label for="high">БАРС(Подольск)</label>
+					  </span>
+                  <input type="text" name="bars" id="name" placeholder="Пример ФИО по кому выдать права" autocomplete="off" tabindex="1" class="txtinput1">
+              </div>
+    		<div id="row_ryazan">
+								<span class="radiobadge">
+                			<input type="checkbox" id="high" name="check[10]" value="УПП_РХЛЕБ(Рязань)">
+    						<label for="high">УПП_РХЛЕБ(Рязань)</label>
+								</span>
+                  <input type="text" name="upprhleb" id="name" placeholder="Пример ФИО по кому выдать права" autocomplete="off" tabindex="1" class="txtinput1">
+
+                  <span class="radiobadge">
+    						<input type="checkbox" id="high" name="check[11]" value="УСП_РХЛЕБ(Рязань)">
+    						<label for="high">УСП_РХЛЕБ(Рязань)</label>
+					  </span>
+                <input type="text" name="usprhleb" id="name" placeholder="Пример ФИО по кому выдать права" autocomplete="off" tabindex="1" class="txtinput1">
+
+			</div>
+              <div id="row_rzp"> 
+              <span class="radiobadge">
+            <input type="checkbox" id="high" name="check[12]" value="УПП_РЗП(Рязань)">
+            <label for="high">УПП_РЗП(Рязань)</label>
+			  </span>
+              <input type="text" name="upprzp" id="name" placeholder="Пример ФИО по кому выдать права" autocomplete="off" tabindex="1" class="txtinput1">
+            
+
+          </div>
+              <div id="row_kostroma">
+              <span class="radiobadge">
+						<input type="checkbox" id="high" name="check[13]" value="УПП_РХ(Кострома)">
+						<label for="high">УПП_РХ(Кострома)</label>
+					</span>
+              <input type="text" name="upprh" id="name" placeholder="Пример ФИО по кому выдать права" autocomplete="off" tabindex="1" class="txtinput1">
+                  <span class="radiobadge">
+            <input type="checkbox" id="high" name="check[14]" value="УСП_РХ(Кострома)">
+            <label for="high">УСП_РХ(Кострома)</label>
+          </span>
+              <input type="text" name="usprh" id="name" placeholder="Пример ФИО по кому выдать права" autocomplete="off" tabindex="1" class="txtinput1">
+              </div>
+
+            </section>
+
+          </section>
+        </div>
+
+
+        <section id="buttons">
+          <!--input type="reset" name="reset" id="resetbtn" class="resetbtn" value="Reset"-->
+          <input type="submit" name="submit" id="submitbtn" class="submitbtn" tabindex="7" value="Отправить">
+          <br style="clear:both;">
+        </section>
+      </form>
+    </section>
+<script type="text/javascript">
+  $(function() {
+  $('#row_podolsk1').hide();
+   $('#row_podolsk2').hide();
+  $('#row_ryazan').hide();
+  $('#row_rzp').hide();
+   $('#row_kostroma').hide();
+  $('#org').change(function() {
+    if ($('#org').val() == 'Грейнхолдинг') {
+      $('#row_podolsk1').show();
+    } else {
+      $('#row_podolsk1').hide();
+    }
+    if ($('#org').val() == 'Подольский хлебокомбинат') {
+      $('#row_podolsk2').show();
+    } else {
+      $('#row_podolsk2').hide();
+    }
+     if ($('#org').val() == 'РязаньХлеб') {
+      $('#row_ryazan').show();
+    } else {
+      $('#row_ryazan').hide();
+    }
+       if ($('#org').val() == 'Рязаньзернопродукт') {
+      $('#row_rzp').show();
+    } else {
+      $('#row_rzp').hide();
+    }
+       if ($('#org').val() == 'ОООРуский хлеб') {
+      $('#row_kostroma').show();
+    } else {
+      $('#row_kostroma').hide();
+    }
+    
+    
+  });
+});
+
+</script>
+  </body>
+
+</html>
